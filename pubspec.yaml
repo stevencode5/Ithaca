@@ -1,5 +1,5 @@
 name: ithaca
-description: A new Flutter project.
+description: App that help you controled your budget in your big travels.
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -70,3 +70,5 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.io/custom-fonts/#from-packages
+  assets:
+    - assets/imgs/LogoFlutter.png
