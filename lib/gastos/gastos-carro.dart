@@ -15,6 +15,9 @@ class GastosCarro extends StatelessWidget {
             children: <Widget>[              
               _crearBotonGastoGasolina(context),
               _crearBotonGastoPeaje(context),
+              _crearBotonGastoParqueadero(context),
+              _crearBotonGastoMecanica(context),
+              _crearBotonGastoLavada(context),
               _crearBotonGastoOtro(context)
             ],
           )
@@ -41,37 +44,40 @@ class GastosCarro extends StatelessWidget {
   }
 
   RaisedButton _crearBotonGastoPeaje(BuildContext context){
+    return _crearBotonGastoCarro('Peaje', Icons.toll, context);
+  }
+
+  RaisedButton _crearBotonGastoParqueadero(BuildContext context){
+    return _crearBotonGastoCarro('Parqueadero', Icons.local_parking, context);
+  }
+
+  RaisedButton _crearBotonGastoMecanica(BuildContext context){
+    return _crearBotonGastoCarro('Mecanica', Icons.toll, context);
+  }
+
+  RaisedButton _crearBotonGastoLavada(BuildContext context){
+    return _crearBotonGastoCarro('Lavada', Icons.watch_later, context);
+  }
+
+  RaisedButton _crearBotonGastoOtro(BuildContext context){
+    return _crearBotonGastoCarro('Otro', Icons.add, context);
+  }
+  
+  RaisedButton _crearBotonGastoCarro(String tipo, IconData icono, BuildContext context){
     return RaisedButton(
         padding: EdgeInsets.all(30),
         textColor: Colors.white,
         color: Colors.blue,
         child: Column(
           children: <Widget>[            
-            Icon(Icons.toll),
-            Text('Peaje'),
+            Icon(icono),
+            Text(tipo),
           ],
         ),
         onPressed: (){
-          Navigator.of(context).pushNamed('/gastos-carro/peaje');
+          Navigator.push(context, MaterialPageRoute(builder: (context) => GastoRegular('Carro', tipo)));
         },
       );
   }
 
-  RaisedButton _crearBotonGastoOtro(BuildContext context){
-    return RaisedButton(
-        padding: EdgeInsets.all(30),
-        textColor: Colors.white,
-        color: Colors.blue,
-        child: Column(
-          children: <Widget>[            
-            Icon(Icons.add),
-            Text('Otro'),
-          ],
-        ),
-        onPressed: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context) => GastoRegular('tipo', 'nombre')));
-        },
-      );
-  }
-  
 }
