@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 
 class GastoRegular extends StatefulWidget {
 
-  final String categoriaGasto;
+  final String tipoGasto;
+  final String nombreGasto;
 
-  GastoRegular(@required this.categoriaGasto);
+  GastoRegular(@required this.tipoGasto, @required this.nombreGasto);
 
   @override
   State<StatefulWidget> createState() {
@@ -15,7 +16,8 @@ class GastoRegular extends StatefulWidget {
 
 class _GastoRegularState extends State<GastoRegular> {
 
-  String _categoria;
+  String _tipo;
+  String _nombre;
   String _precio;
   String _observacion;
   
@@ -23,10 +25,12 @@ class _GastoRegularState extends State<GastoRegular> {
 
   @override
   Widget build(BuildContext context) {
-    this._categoria =widget.categoriaGasto;
+    this._tipo = widget.tipoGasto;
+    this._nombre = widget.nombreGasto;
+
     return Scaffold(
         appBar: AppBar(
-          title: Text(this._categoria),
+          title: Text('$_tipo - $_nombre'),
         ),
         body: _creaFormulario());
   }

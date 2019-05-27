@@ -25,9 +25,15 @@ class GastosCarro extends StatelessWidget {
 
   RaisedButton _crearBotonGastoGasolina(BuildContext context){
     return RaisedButton(
+        padding: EdgeInsets.all(30),
         textColor: Colors.white,
         color: Colors.blue,
-        child: Text('Gasolina'),
+        child: Column(
+          children: <Widget>[            
+            Icon(Icons.local_gas_station),
+            Text('Gasolina'),
+          ],
+        ),
         onPressed: (){
           Navigator.of(context).pushNamed('/gastos-carro/gasolina');
         },
@@ -36,9 +42,15 @@ class GastosCarro extends StatelessWidget {
 
   RaisedButton _crearBotonGastoPeaje(BuildContext context){
     return RaisedButton(
+        padding: EdgeInsets.all(30),
         textColor: Colors.white,
         color: Colors.blue,
-        child: Text('Peaje'),
+        child: Column(
+          children: <Widget>[            
+            Icon(Icons.toll),
+            Text('Peaje'),
+          ],
+        ),
         onPressed: (){
           Navigator.of(context).pushNamed('/gastos-carro/peaje');
         },
@@ -47,11 +59,17 @@ class GastosCarro extends StatelessWidget {
 
   RaisedButton _crearBotonGastoOtro(BuildContext context){
     return RaisedButton(
+        padding: EdgeInsets.all(30),
         textColor: Colors.white,
         color: Colors.blue,
-        child: Text('Otro'),
+        child: Column(
+          children: <Widget>[            
+            Icon(Icons.add),
+            Text('Otro'),
+          ],
+        ),
         onPressed: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context) => GastoRegular('Carro gas')));
+          Navigator.push(context, MaterialPageRoute(builder: (context) => GastoRegular('tipo', 'nombre')));
         },
       );
   }
