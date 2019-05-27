@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ithaca/gastos.dart';
-import 'package:ithaca/gastos/gasto-generico.dart';
 import 'package:ithaca/gastos/gastos-carro.dart';
 import 'package:ithaca/gastos/gastos-carro/gasolina.dart';
 import 'package:ithaca/gastos/gastos-carro/peaje.dart';
