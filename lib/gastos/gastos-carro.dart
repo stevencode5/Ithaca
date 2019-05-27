@@ -13,12 +13,12 @@ class GastosCarro extends StatelessWidget {
         child: Center(
           child: Column(
             children: <Widget>[              
-              _crearBotonGastoGasolina(context),
-              _crearBotonGastoPeaje(context),
-              _crearBotonGastoParqueadero(context),
-              _crearBotonGastoMecanica(context),
-              _crearBotonGastoLavada(context),
-              _crearBotonGastoOtro(context)
+              _crearBotonGasolina(context),
+              _crearBotonPeaje(context),
+              _crearBotonParqueadero(context),
+              _crearBotonMecanica(context),
+              _crearBotonLavada(context),
+              _crearBotonOtro(context)
             ],
           )
         )        
@@ -26,7 +26,7 @@ class GastosCarro extends StatelessWidget {
     );
   }
 
-  RaisedButton _crearBotonGastoGasolina(BuildContext context){
+  RaisedButton _crearBotonGasolina(BuildContext context){
     return RaisedButton(
         padding: EdgeInsets.all(30),
         textColor: Colors.white,
@@ -43,23 +43,23 @@ class GastosCarro extends StatelessWidget {
       );
   }
 
-  RaisedButton _crearBotonGastoPeaje(BuildContext context){
+  RaisedButton _crearBotonPeaje(BuildContext context){
     return _crearBotonGastoCarro('Peaje', Icons.toll, context);
   }
 
-  RaisedButton _crearBotonGastoParqueadero(BuildContext context){
+  RaisedButton _crearBotonParqueadero(BuildContext context){
     return _crearBotonGastoCarro('Parqueadero', Icons.local_parking, context);
   }
 
-  RaisedButton _crearBotonGastoMecanica(BuildContext context){
+  RaisedButton _crearBotonMecanica(BuildContext context){
     return _crearBotonGastoCarro('Mecanica', Icons.toll, context);
   }
 
-  RaisedButton _crearBotonGastoLavada(BuildContext context){
+  RaisedButton _crearBotonLavada(BuildContext context){
     return _crearBotonGastoCarro('Lavada', Icons.watch_later, context);
   }
 
-  RaisedButton _crearBotonGastoOtro(BuildContext context){
+  RaisedButton _crearBotonOtro(BuildContext context){
     return _crearBotonGastoCarro('Otro', Icons.add, context);
   }
   
