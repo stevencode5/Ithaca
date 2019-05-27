@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:ithaca/gastos.dart';
 import 'package:ithaca/gastos/gastos-carro.dart';
 import 'package:ithaca/gastos/gastos-carro/gasolina.dart';
-import 'package:ithaca/gastos/gastos-carro/peaje.dart';
 import 'package:ithaca/gastos/gastos-comida.dart';
 import 'package:ithaca/gastos/gastos-hospedaje.dart';
 import 'package:ithaca/gastos/gastos-otros.dart';
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Ithaca',
-        home: GastosCarro(),
+        home: HomeInicio(),
         routes: <String, WidgetBuilder>{
           '/home': (BuildContext context) => HomeInicio(),
           '/gastos': (BuildContext context) => Gastos(),
@@ -32,7 +31,6 @@ class MyApp extends StatelessWidget {
           '/ingresos-cafe' : (BuildContext context) => IngresosCafe(),
           '/ingresos-fotografia' : (BuildContext context) => IngresosFotografia(),
           '/gastos-carro/gasolina' : (BuildContext context) => Gasolina(),
-          '/gastos-carro/peaje' : (BuildContext context) => Peaje(),
           '/otro' : (BuildContext context) => Otro()           
         });
   }
