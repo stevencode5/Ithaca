@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ithaca/gasto-regular.dart';
 
 class Gastos extends StatelessWidget {
   @override
@@ -15,6 +16,8 @@ class Gastos extends StatelessWidget {
               _crearBotonGastosCarro(context),
               _crearBotonGastosHospedaje(context),
               _crearBotonGastosComida(context),
+              _crearBotonGastosAtracciones(context),
+              _crearBotonGastosServicios(context),
               _crearBotonGastosOtros(context)
             ],
           )
@@ -70,13 +73,35 @@ class Gastos extends StatelessWidget {
       );
   }
 
+  RaisedButton _crearBotonGastosAtracciones(BuildContext context){
+    return RaisedButton(
+        textColor: Colors.white,
+        color: Colors.blue,
+        child: Text('Atracciones'),
+        onPressed: (){
+          Navigator.of(context).pushNamed('/gastos-atracciones/atracciones');
+        },
+      );
+  }
+
+  RaisedButton _crearBotonGastosServicios(BuildContext context){
+    return RaisedButton(
+        textColor: Colors.white,
+        color: Colors.blue,
+        child: Text('Servicios'),
+        onPressed: (){
+          Navigator.of(context).pushNamed('/gastos-servicios');
+        },
+      );
+  }
+
   RaisedButton _crearBotonGastosOtros(BuildContext context){
     return RaisedButton(
         textColor: Colors.white,
         color: Colors.blue,
         child: Text('Otros'),
         onPressed: (){
-          Navigator.of(context).pushNamed('/gastos-otros');
+          Navigator.push(context, MaterialPageRoute(builder: (context) => GastoRegular('Otros', 'otro')));
         },
       );
   }
